@@ -4,9 +4,9 @@ import dotenv from 'dotenv'
 dotenv.config()
 
 const connection = await mysql.createConnection({
-    uri: process.env.DB_URI,
+    uri: process.env.MYSQL_URI,
     ssl:{
-        ca: process.env.DB_CA_CERT,
+        ca: process.env.MYSQL_SSL_CERT,
         rejectUnauthorized: false // Accept self-signed certificates
     }
 })
